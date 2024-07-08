@@ -146,6 +146,24 @@
       </form>
     </div>
 
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $nama = $_POST['nama'];
+        $kotalahir = $_POST['kotalahir'];
+        $lahir = $_POST['lahir'];
+        $alamat = $_POST['alamat'];
+        $jk = $_POST['jk'];
+        $agama = $_POST['agama'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+
+        echo '<script>';
+        echo 'alert("Data telah diterima!\nNama: ' . $nama . '\nKota Lahir: ' . $kotalahir . '\nTanggal Lahir: ' . $lahir . '\nAlamat: ' . $alamat . '\nJenis Kelamin: ' . $jk . '\nAgama: ' . $agama . '\nEmail: ' . $email . '\nTelepon: ' . $phone . '");';
+        echo '</script>';
+    }
+    ?>
+
+
     <script>
       document
         .getElementById("form")
